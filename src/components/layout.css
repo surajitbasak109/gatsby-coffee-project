@@ -62,3 +62,9 @@ h6 {
 .footer {
   background: var(--mainBrown);
 }
+
+.menu,
+.contact,
+.thankyou {
+  background: var(--mainGrey);
+}

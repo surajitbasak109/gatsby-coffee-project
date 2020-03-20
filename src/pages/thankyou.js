@@ -3,20 +3,24 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BackgroundSection from "../components/Globals/BackgroundSection"
-import Info from "../components/Home/Info"
-import Menu from "../components/Home/Menu"
-import Products from "../components/Home/Products"
-import Contact from "../components/Home/Contact"
+import Title from "../components/Globals/Title"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsy`, `application`, `react`]} />
-    <BackgroundSection img={data.img.childImageSharp.fluid} title="Sun's Coffee Shop" styleClass="default-background" />
-    <Info />
-    <Menu items={data.menu}></Menu>
-    <Products />
-    <Contact />
+    <SEO title="Thankyou" keywords={[`gatsy`, `application`, `react`]} />
+    <div className="thankyou">
+      <div className="container">
+        <div className="row">
+          <div className="col-11 mx-auto py-5 text-center thankyou" style={{ height: "78.5vh" }}>
+            <Title title="Email sent" />
+            <p>Thank you for contacting us, one of our representative will contact you on email.</p>
+            <Link className="btn btn-yellow btn-lg" to="/">
+              Back to Homepage
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 
